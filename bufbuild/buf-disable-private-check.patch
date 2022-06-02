@@ -1,0 +1,22 @@
+diff -ru buf-1.5.0-orig/private/usage/usage.go buf-1.5.0/private/usage/usage.go
+--- buf-1.5.0-orig/private/usage/usage.go	2022-05-30 13:39:24.000000000 -0600
++++ buf-1.5.0/private/usage/usage.go	2022-06-02 00:28:41.687904195 -0600
+@@ -25,11 +25,12 @@
+ 
+ const debugBinPrefix = "__debug_bin"
+ 
+-func init() {
+-	if err := check(); err != nil {
+-		panic(err.Error())
+-	}
+-}
++// Disable the private check as it fails if building without module support.
++//  func init() {
++//  	if err := check(); err != nil {
++//  		panic(err.Error())
++//  	}
++//  }
+ 
+ func check() error {
+ 	buildInfo, ok := debug.ReadBuildInfo()
+Only in buf-1.5.0: .vscode
