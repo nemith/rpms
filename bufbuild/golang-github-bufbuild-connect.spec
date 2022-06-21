@@ -3,7 +3,7 @@
 
 # https://github.com/bufbuild/connect-go
 %global goipath         github.com/bufbuild/connect-go
-Version:                0.1.0
+Version:                0.1.1
 
 %gometa
 
@@ -56,5 +56,7 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 %gopkgfiles
 
 %changelog
+* Tue Jun 21 2022 Brandon Bennett <brandon@brbe.me> - 0.1.1-1
+- Bump version to 0.1.1
 * Wed Jun 01 2022 Brandon Bennett <brandon@brbe.me> - 0.1.0-1
 - Initial package

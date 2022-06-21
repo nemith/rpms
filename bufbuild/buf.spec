@@ -1,7 +1,7 @@
 %global goipath github.com/bufbuild/buf
 %global gotestflags %{gotestflags} -short
 
-Version: 1.5.0
+Version: 1.6.0
 
 %gometa
 
@@ -14,7 +14,7 @@ by another team.}
 %global godocs        *.md
 
 Name:    buf
-Release: 2%{?disto}
+Release: 1%{?disto}
 Summary: A new way of working with Protocol Buffers
 License: ASL 2.0
 URL:     %{gourl}
@@ -53,8 +53,9 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 %gopkgfiles
 
 %changelog
+* Tue Jun 21 2022 Brandon Bennett <brandon@brbe.me> - 1.6.0-1
+- Update to buf 1.6.0
 * Thu Jun 02 2022 Brandon Bennett <brandon@brbe.me> - 1.5.0-2
 - Disable `private` directory check that breaks when not compiling in module mode
-
 * Wed Jun 01 2022 Brandon Bennett <brandon@brbe.me> - 1.5.0-1
 - First packaging
